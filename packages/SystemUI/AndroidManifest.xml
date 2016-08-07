@@ -125,6 +125,14 @@
     <!-- Screen Capturing -->
     <uses-permission android:name="android.permission.MANAGE_MEDIA_PROJECTION" />
 
+    <!-- Sync tile -->
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <!-- Reboot -->
+    <uses-permission android:name="android.permission.REBOOT" />
+    <uses-permission android:name="android.permission.RECOVERY" />
+
     <!-- Assist -->
     <uses-permission android:name="android.permission.ACCESS_VOICE_INTERACTION_SERVICE" />
 
@@ -212,6 +220,27 @@
             <meta-data android:name="com.android.settings.category"
                     android:value="com.android.settings.category.system" />
         </activity>
+
+        <activity android:name=".tuner.TunerActivity$QsTunerActivity"
+            android:icon="@drawable/tuner"
+            android:theme="@android:style/Theme.Material.Settings"
+            android:label="@string/quick_settings"
+            android:process=":tuner"
+            android:exported="true"/>
+
+        <activity android:name=".tuner.TunerActivity$StatusBarIcons"
+            android:icon="@drawable/tuner"
+            android:theme="@android:style/Theme.Material.Settings"
+            android:label="@string/status_bar"
+            android:process=":tuner"
+            android:exported="true"/>
+
+        <activity android:name=".tuner.TunerActivity$DemoModeActivity"
+            android:icon="@drawable/tuner"
+            android:theme="@android:style/Theme.Material.Settings"
+            android:label="@string/demo_mode"
+            android:process=":tuner"
+            android:exported="true"/>
 
         <!-- Alternate Recents -->
         <activity android:name=".recents.RecentsActivity"
